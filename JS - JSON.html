@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+    // using js 2017
+    // async function fetchData(){
+    //     var url_JSONData = 'https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json';
+    //     var JSONDataResponse = await fetch(url_JSONData);
+    //     var JSONData = await JSONDataResponse.json();
+    //     doStuff(JSONData);
+    // }
+
+    // fetchData();
+    
+    // function doStuff(JSONData){
+    //     console.log(JSONData);
+    // }
+
+    
+    fetch('https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+
+
+    
+    
+    
+</script>
